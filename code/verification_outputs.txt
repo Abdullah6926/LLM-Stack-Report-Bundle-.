@@ -1,0 +1,69 @@
+### python code/cloud_stream.py
+delta: A provider-neutral
+delta:  interface keeps
+delta:  migrations manageable.
+finish: completed [stub]
+exit=0
+### python code/tool_loop.py
+tool_call: {"arguments": {"a": 6, "b": 7}, "name": "multiply"}
+tool_result: 42 [stub]
+final: 6 × 7 = 42 [stub]
+exit=0
+### python code/structured_output.py
+{"severity": "low", "summary": "Offline structured-output demonstration."}
+schema_valid: true [stub]
+exit=0
+### python code/ollama_rest.py
+ndjson: {"done": false, "message": {"content": "Hello", "role": "assistant"}}
+ndjson: {"done": false, "message": {"content": " there.", "role": "assistant"}}
+ndjson: {"done": true, "eval_count": 2, "prompt_eval_count": 9}
+note: deterministic fixture, not a live Ollama response
+exit=0
+### python code/ollama_openai_compat.py
+assistant: Ollama-compatible adapter returned a local stub. [stub]
+exit=0
+### python code/mcp_raw_stdio.py
+> {"jsonrpc":"2.0","id":1,"method":"server/discover","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"demo","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< {"jsonrpc":"2.0","id":1,"result":{"resultType":"complete","supportedVersions":["2026-07-28"],"capabilities":{"tools":{},"resources":{},"prompts":{}},"_meta":{"io.modelcontextprotocol/serverInfo":{"name":"stack-demo","version":"1.0.0"}},"ttlMs":3600000,"cacheScope":"public"}}
+> {"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"add","arguments":{"a":19,"b":23},"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"demo","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< {"jsonrpc":"2.0","id":2,"result":{"content":[{"type":"text","text":"42"}],"structuredContent":{"result":42}}}
+exit=0
+### python code/hybrid_router.py
+Result(provider='cloud', text='cloud answer [stub]', cost_usd=0.002)
+Result(provider='local', text='local answer [stub]', cost_usd=0.0)
+exit=0
+### python code/rag_hybrid.py
+lexical: ['a', 'c', 'b']
+toy_dense: ['a', 'b', 'c']
+rrf: ['a', 'c', 'b']
+recall@2=1.00
+note: toy dense ranking is deterministic scaffolding, not an embedding benchmark
+exit=0
+### python code/agent_loop.py
+MCP standardizes tools, resources and prompts.
+steps: 1
+exit=0
+### python code/mcp_description_pin.py
+original: True
+changed: False (rejected)
+sha256: d83a368a532d3c9f698e78cccfcca7fbad0bce0501dc7562b2beaad55ea85b47
+exit=0
+### python code/trace_jsonl.py
+{'provider': 'offline', 'model': 'stub', 'latency_ms': 0.0, 'input_tokens': 12, 'output_tokens': 4, 'estimated_cost_usd': 0.0}
+exit=0
+### python calc/kv_cache.py
+KV cache: 1,073,741,824 bytes = 1.000 GiB
+exit=0
+### python calc/vram.py
+weights=3.67 GiB; KV=1.00 GiB; total+overhead=5.13 GiB
+exit=0
+### python calc/tokens_per_sec.py
+idealized ceiling=125.0 tokens/s (real throughput is lower)
+exit=0
+### python calc/lora_params.py
+per matrix=65,536; 1 matrix/matrices=65,536 trainable parameters
+exit=0
+### python calc/breakeven.py
+API=$200.00/month; self-host=$190.00/month; cheaper=self-host
+Assumptions only; exclude engineering, redundancy, quality and utilization variability unless entered.
+exit=0

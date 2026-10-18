@@ -1,0 +1,6 @@
+FROM llama3.2
+PARAMETER temperature 0.2
+PARAMETER num_ctx 8192
+SYSTEM You are a concise technical assistant. State assumptions and uncertainty.
+# TEMPLATE is intentionally left to the model's packaged chat template unless required.
+# ADAPTER ./adapters/my-lora.gguf

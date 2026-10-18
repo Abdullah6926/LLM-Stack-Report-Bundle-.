@@ -1,0 +1,4 @@
+# Optional live integrations. Core examples/tests use Python 3.11+ standard library only.
+# Pin versions for reproducible installs; internet access is required to install these.
+openai==3.31.0
+mcp==2.3.0
